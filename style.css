@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: azure;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.accordion-container {
+    width: 50%;
+    cursor: pointer;
+}
+
+.accordion-container .title {
+    color: blue;
+    text-align: center;
+}
+
+.accordion-container:hover .title {
+    color: black;
+}
+
+.item-container:hover .accordion-item-state-icon {
+    transform: rotate(180deg);
+    transition: 0.45s;
+}
+
+.item-container {
+    padding: 1rem;
+    border-bottom: 0.1rem solid;
+}
+
+.item-container img {
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    transition: opacity 0.3s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.item-container:hover img {
+    display: block;
+    width: 60%;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+label:hover {
+    cursor: pointer;
+}
+
+img {
+    padding: 1rem;
+}
