@@ -30,6 +30,10 @@ main {
     transition: 0.45s;
 }
 
+input:checked ~ .accordion-item-state-icon {
+    transform: rotate(180deg);
+}
+
 .item-container {
     padding: 1rem;
     border-bottom: 0.1rem solid;
@@ -51,6 +55,16 @@ main {
     visibility: visible;
 }
 
+input {
+    visibility: hidden;
+}
+
+input:checked ~ img {
+    display: block; 
+    width: 60%; 
+    opacity: 1;
+    visibility: visible;
+}
 
 label:hover {
     cursor: pointer;
