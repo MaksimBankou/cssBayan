@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: azure;
+}
+
+@media (max-width: 1920px) {
+    body {
+        background-color: rgba(165, 42, 48, 0.221);
+    }
+    .item-container {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 820px) {
+    body {
+        background-color: rgba(130, 42, 165, 0.221);
+    }
+    .item-container {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        background-color: rgba(255, 235, 205, 0.71);
+    }
+
+    .item-container {
+        font-size: 0.5rem;
+    }
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.accordion-container {
+    width: 50%;
+    cursor: pointer;
+}
+
+.accordion-container .title {
+    color: blue;
+    text-align: center;
+}
+
+.accordion-container:hover .title {
+    color: black;
+}
+
+.item-container:hover .accordion-item-state-icon {
+    transform: rotate(180deg);
+    transition: 0.45s;
+}
+
+input:checked ~ .accordion-item-state-icon {
+    transform: rotate(180deg);
+}
+
+.item-container {
+    padding: 1rem;
+    border-bottom: 0.1rem solid;
+}
+
+.item-container img {
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    transition: opacity 0.3s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.item-container:hover img {
+    display: block;
+    width: 60%;
+    opacity: 1;
+    visibility: visible;
+}
+
+input {
+    visibility: hidden;
+}
+
+input:checked ~ img {
+    display: block; 
+    width: 60%; 
+    opacity: 1;
+    visibility: visible;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+img {
+    padding: 1rem;
+}
